@@ -1,1 +1,242 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web de Eli</title>
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+
+<style>
+body[data-bs-theme="dark"] .dropdown-menu{
+background-color:#2c2c2c!important;
+border-color:#444;
+}
+
+body[data-bs-theme="dark"] .dropdown-item{
+color:#f8f9fa!important;
+}
+
+body[data-bs-theme="dark"] .dropdown-item:hover,
+body[data-bs-theme="dark"] .dropdown-item:focus{
+background-color:#3c3c3c!important;
+color:#ffffff!important;
+}
+
+#themeToggle{
+border:none;
+background:transparent;
+font-size:1.3rem;
+color:inherit;
+}
+
+.navbar-toggler{
+border:none;
+}
+
+.navbar-toggler-icon{
+background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280,0,0,0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+body[data-bs-theme="dark"] .navbar-toggler-icon{
+background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.9%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.logo{
+width:40px;
+height:40px;
+object-fit:cover;
+}
+
+@media (max-width:576px){
+.logo{
+width:30px;
+height:30px;
+}
+}
+
+@media (min-width:992px){
+.logo{
+width:50px;
+height:50px;
+}
+}
+</style>
+</head>
+
+<body data-bs-theme="light">
+
+<nav class="navbar navbar-expand-lg navbar-light shadow sticky-top">
+<div class="container-fluid">
+
+<a class="navbar-brand d-flex align-items-center" href="#">
+<img src="logo.png" alt="Logo" class="logo rounded-circle me-2">
+<span class="fw-bold">Web d'Eli</span>
+</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Projectes</a>
+
+<ul class="dropdown-menu">
+
+<li>
+<a class="dropdown-item" href="https://ehermoso-del.github.io/cerca/">
+<i class="fa-solid fa-code me-1"></i> Recera de la maduixa
+</a>
+</li>
+
+<li>
+<a class="dropdown-item" href="https://ehermoso-del.github.io/contaminacio/">
+<i class="fa-solid fa-database me-1"></i> Contaminacio
+</a>
+</li>
+
+</ul>
+</li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Treballs</a>
+
+<ul class="dropdown-menu">
+
+<li>
+<a class="dropdown-item" href="https://ehermoso-del.github.io/cerca/">
+<i class="fa-solid fa-chart-line me-1"></i> Projecte 1. Cerca Ia vs Google academic
+</a>
+</li>
+
+<li>
+<a class="dropdown-item" href="#">
+<i class="fa-solid fa-cogs me-1"></i> Projecte 2. "2 dies en 22 peus
+</a>
+</li>
+
+</ul>
+</li>
+
+</ul>
+
+<button id="themeToggle" class="ms-2">
+<i class="fa-solid fa-moon"></i>
+</button>
+
+</div>
+</div>
+</nav>
+
+
+<main class="container py-5">
+
+<p class="lead">Air pollution, meteorological, conditions and respiratory infections in Baix Llobregat. A 14-year spatiotemporal analysis.</p>
+
+<p>The objectives of this research project are:</p>
+
+<ul>
+
+<li>
+Yingqing & Eli are studying all data from Paleja that is a city located in Baix Llobregat county. In this county we are using data from
+<a href="https://mediambient.gencat.cat/ca/05_ambits_dactuacio/atmosfera/qualitat_de_laire/avaluacio/xarxa_de_vigilancia_i_previsio_de_la_contaminacio_atmosferica_xvpca/index.html">
+Air Pollution Prevention and Monitoring Network (XPCVA in catalan)
+</a>
+corresponding to hourly data of air pollutants from year 1991-2025. Data included: nitrogen oxide (NO),mitrogen dioxid (NO2), nitrogen oxides (NOX), sulfur dioxide(SO2)
+</li>
+
+<li>
+Meteorological data is available from
+<a href="https://www.meteo.cat/observacions/xema">
+Meteocat XEMA (Meteorological data server of Catalonia)
+</a>
+so we choose the nearest meteorological station that is Vallirana. The data structure is base on semi-hourly data that is, data every 30 minutes from 2009.
+Data included: temperature, relative humidity, wind direction, wind speed, solar and irradiance.
+</li>
+
+<li>
+Respiratory infection data are collected from Catalonia Information System for Infection Surveillance (SIVIC) using data from region 75, that is Barcelona Metropolitan south region 261 is the identificator of the Primary care centre from Vallirana
+</li>
+
+</ul>
+
+
+<img src="ciutatwide.png">
+
+<p class="lead">Air Pollution in Pallejà (2011–2025)</p>
+
+<ul>
+<li>
+The graphs show how the concentrations of nitrogen oxides (NO, NO₂, NOₓ) and sulfur dioxide (SO₂) vary according to hour of the day, month of the year and day of the week. These pollutants are mainly associated with road traffic and combustion processes.
+</li>
+</ul>
+
+<p class="lead">Hourly variation</p>
+
+<ul>
+<li>
+The hourly pattern shows a strong morning peak around 7–9 h, when traffic increases during commuting hours. At this moment, NO and NO₂ rise sharply, producing the highest values of NOₓ. After this peak, concentrations decrease during midday, likely due to better atmospheric dispersion caused by higher temperatures and sunlight. A smaller increase appears in the evening, related to the second traffic peak when people return home. SO₂ remains very low and stable during the entire day, indicating that local sources of sulfur emissions are limited.
+</li>
+</ul>
+
+<p class="lead">Monthly variation</p>
+
+<ul>
+<li>
+Pollution levels show a clear seasonal cycle. The highest concentrations of nitrogen oxides occur in winter months (December–February). During this period, colder conditions and weaker air circulation can trap pollutants close to the ground.
+
+In contrast, concentrations decrease in spring and summer, reaching the lowest values between May and August. Warmer temperatures and stronger atmospheric mixing help disperse pollutants more efficiently.
+
+Levels begin to increase again in autumn, as meteorological conditions become more stable.
+</li>
+</ul>
+
+<p class="lead">General interpretation and conclusion</p>
+
+<ul>
+<li>
+Overall, the results suggest that road traffic is the main source of nitrogen oxide pollution in Pallejà. The clear peaks during commuting hours and higher levels during weekdays strongly support this idea.
+
+Seasonal differences also indicate that meteorological conditions influence air quality, with winter conditions favoring pollutant accumulation and summer conditions improving dispersion.
+
+These patterns show that both human activity and weather conditions control air pollution levels, highlighting the importance of reducing traffic emissions and improving urban mobility to protect air quality and public health.
+</li>
+</ul>
+
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+const themeToggle=document.getElementById('themeToggle');
+const themeIcon=themeToggle.querySelector('i');
+
+themeToggle.addEventListener('click',()=>{
+
+if(document.body.getAttribute('data-bs-theme')==='dark'){
+
+document.body.setAttribute('data-bs-theme','light');
+themeIcon.classList.remove('fa-sun');
+themeIcon.classList.add('fa-moon');
+
+}else{
+
+document.body.setAttribute('data-bs-theme','dark');
+themeIcon.classList.remove('fa-moon');
+themeIcon.classList.add('fa-sun');
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
